@@ -1,0 +1,27 @@
+
+<project name="ci" default="phpunit">
+ 
+    <target name="phpunit">
+     
+        <exec executable="phpunit" >
+       
+        </exec>
+        
+    </target>
+    
+    <target name="hello">
+        <echo>Hello</echo>
+    </target>
+   
+   <target name="world" depends="hello">
+        <echo>World!</echo>
+    </target>
+
+    <fileset dir="${dist}">
+        <and>
+            <filename name="**"/>
+            <date datetime="01/01/2011" when="before"/>
+        </and>
+    </fileset>
+
+</project>
