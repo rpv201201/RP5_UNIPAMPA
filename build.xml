@@ -9,12 +9,12 @@
         
     </target>
     
-    <target name="hello">
-        <echo>Hello</echo>
+    <target name="EX 01">
+        <echo>EX 01 </echo>
     </target>
    
-    <target name="world" depends="hello">
-        <echo>World!</echo>
+    <target name="EY " depends="EX 01">
+        <echo>e EY 02 exibidos!</echo>
     </target>
 
 </project>
